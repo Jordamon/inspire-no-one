@@ -1,5 +1,4 @@
 # Inspirational Nonsense Generator
-==================================
 
 ## Overview
 
