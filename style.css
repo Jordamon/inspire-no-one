@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.flex-conatiner {
+.flex-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,11 +13,12 @@
 
 .title-container {
     flex-direction: row;
+    height: 20%;
 }
 
 .generated-area {
     background-color: antiquewhite;
-    height: 320px;
+    height: 30%;
 }
 
 h1 {
@@ -36,9 +37,22 @@ button {
     margin: 20px;
     font-size: 30px;
     background-color: lightskyblue;
-    box-shadow: 10px 5px 5px;
+    box-shadow: 10px 5px 5px grey;
     border-radius: 10px;
     text-align: center;
+}
+button:active {
+    margin: 22px 20px 18px 20px;
+
+    box-shadow: inset 0px 0px 10px #0a0a0a;
+}
+
+.statement-area {
+    height: 30%;
+}
+
+.statement {
+    font-size: 80px;
 }
 
 p {
