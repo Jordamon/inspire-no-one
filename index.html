@@ -3,6 +3,7 @@
     <head>
         <title>Inspire No One</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <section class="flex-container">
@@ -15,13 +16,22 @@
         </section>
         <div class="generated-area flex-container">
             <div class="statement-area flex-container">
-            <p class="statement" id="generatedStatement">""</p>
+            <p class="statement" id="generatedStatement"></p>
             </div>
-            <button onclick="updateGeneratedStatement()">Generate</button>
+            <button onclick="updateGeneratedStatement()" class="generate-btn">Generate</button>
         </div>
         <p>Whenever you're feeling down or uninspired come to this page and hit the button to be unlifted by a statement that's pretty useless and non-sensical.
             It's random though so it might make you laugh and smile for second before looking over your shoulder to make sure no one is watching you do this weird stuff.</p>
         <script type="text/javascript" src="script.js"></script>
     </body>
-    <footer></footer>
+    <footer class="flex-container">
+        <div class="col-3 flex-container">Code by Jordamon</div>
+        <div class="col-3 flex-container">This page was designed with mental health in mind. Sometimes we need a break and to not be so serious. If you need a sign to look after yourself today, this is it. Please see the following links on how to keep on top of your mental health.
+            <div class="link-container flex-container">
+            <button class="link">NHS</button>
+            <button class="link">Other</button>
+            </div>
+        </div>
+        <div class="col-3 flex-container"><i class="fa-brands fa-github"></i></div>
+    </footer>
 </html>
