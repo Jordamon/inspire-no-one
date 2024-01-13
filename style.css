@@ -1,6 +1,11 @@
+/* general page styles */
 * {
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
 }
 
 .flex-container {
@@ -11,6 +16,8 @@
     text-align: center;
 }
 
+/* page feature styles */
+
 .title-container {
     flex-direction: row;
     height: 20%;
@@ -18,7 +25,7 @@
 
 .generated-area {
     background-color: antiquewhite;
-    height: 30%;
+    height: 50%;
 }
 
 h1 {
@@ -32,27 +39,13 @@ h2 {
     font-style: italic;
 }
 
-button {
-    padding: 40px 100px;
-    margin: 20px;
-    font-size: 30px;
-    background-color: lightskyblue;
-    box-shadow: 10px 5px 5px grey;
-    border-radius: 10px;
-    text-align: center;
-}
-button:active {
-    margin: 22px 20px 18px 20px;
-
-    box-shadow: inset 0px 0px 10px #0a0a0a;
-}
-
 .statement-area {
     height: 30%;
 }
 
 .statement {
     font-size: 80px;
+    font-style: italic;
 }
 
 p {
@@ -65,3 +58,47 @@ p {
     width: 10%;
     height: 10%;
 }
+
+/* button styles */
+
+button {
+    margin: 20px;
+    font-size: 30px;
+    background-color: lightskyblue;
+    box-shadow: 10px 5px 5px grey;
+    border-radius: 10px;
+    text-align: center;
+}
+.generate-btn {
+    padding: 40px 100px;
+}
+
+button:active {
+    margin: 22px 20px 18px 20px;
+
+    box-shadow: inset 0px 0px 10px #0a0a0a;
+}
+
+/* footer styles */
+
+footer {
+    flex-direction: row !important;
+    background-color: rgba(6, 6, 6, 0.358);
+    height: 33%;
+}
+
+.col-3 {
+    width: 33%;
+}
+
+.link-container {
+    flex-direction: row;
+}
+
+.link {
+    height: 50px;
+    width: 50px;
+    padding: 30px 30px;
+    font-size: 15px;
+}
+
