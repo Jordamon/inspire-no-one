@@ -1,9 +1,38 @@
 //Arrays for parts of the phrase generator
-
-const beginingPhrase = ["You ", "Just ", "Believe ", "Can ", "Power ", "Pray ", "Energy ", "Keep ", "Get ", "Go "];
-const middlePhrase = ["Are ", "In ", "Keep ", "Do ", "You ", "Is ", "For ", "From ", "Running ", "Move "];
-const endingPhrase = ["Strong", "Yourself", "Going", "It", "Not", "Within", "Love", "Food"];
-
+const beginningPhrase = [
+    "You ", "Just ", "Believe ", "Can ", "Power ", "Pray ", "Energy ", 
+    "Keep ", "Get ", "Go ", "Live ", "Dream ", "Imagine ", "Dance ", "Explore ",
+    "Feel ", "Create ", "Embrace ", "Unlock ", "Discover ", "Transform ", 
+    "Cherish ", "Radiate ", "Invent ", "Celebrate ", "Radiant ", "Enchant ",
+    "Captivate ", "Inspire ", "Uplift ", "Awaken ", "Blossom ", "Thrive ", 
+    "Radiant ", "Ascend ", "Conquer ", "Embark ", "Mystify ", "Emanate ",
+    "Illuminate ", "Fascinate ", "Resonate ", "Synchronize ", "Energize ", "Envision ",
+    "Sculpt ", "Vibrate ", "Stimulate ", "Immerse ", "Transcend ", "Mesmerize ",
+    "Revive ", "Revel ", "Pioneer ", "You ", "Just ", "Believe ", "Can ", "Keep ", "Get ", "Go ", "Live ", "Dream "
+  ];
+  
+  const middlePhrase = [
+    "Are ", "In ", "Keep ", "Do ", "You ", "Is ", "For ", "From ", 
+    "Running ", "Move ", "Laugh ", "Conquer ", "Contribute ", 
+    "Radiate ", "Savor ", "Breathe ", "Illuminate ", "Spark ", "Succeed ", 
+    "Thrive ", "Unleash ", "Empower ", "Harmonize ", "Enrich ", "Revitalize ", 
+    "Persevere ", "Vibrant ", "Elevate ", "Harmonize ", "Revitalize ", "Inspire ", 
+    "Renew ", "Flourish ", "Magnetize ", "Synergize ", "Contribute ", "Engage ", "Transcend ", "Elevate ", "Sway ", "Pioneer ",
+    "Cultivate ", "Revolve ", "Aspire ", "Journey ", "Uproot ", "Ponder ", "Enthrall ",
+    "Quicken ", "Illuminate "
+  ];
+  
+  const endingPhrase = [
+    "Strong", "Yourself", "Going", "It", "Not", "Within", "Love", "Food", 
+    "Adventure", "Harmony", "Wonder", "Magic", "Wisdom", "Infinity", 
+    "Serenity", "Bliss", "Eternity", "Journey", "Symphony", "Rhythm", 
+    "Sunshine", "Whimsy", "Radiance", "Glow", "Unity", "Soul", "Zest", 
+    "Vitality", "Tranquility", "Euphoria", "Sparkle", "Inspiration", 
+    "Gleam", "Dream", "Flair", "Spectacle", "Eclipse", "Luminary",
+    "Ripple", "Infinity","Legacy", "Whisper", "Vortex",
+    "Reverie", "Epiphany", "Majesty", "Eclipse"
+  ];
+  
 // Generator
 
 const phraseGenerator = (arr1, arr2, arr3) => {
@@ -27,7 +56,7 @@ const phraseGenerator = (arr1, arr2, arr3) => {
 const updateGeneratedStatement = () => {
 
     const generatedStatementElement = document.getElementById('generatedStatement');
-    const generatedStatement = phraseGenerator(beginingPhrase, middlePhrase, endingPhrase);
-    generatedStatementElement.textContent = `${generatedStatement}`;
+    const generatedStatement = phraseGenerator(beginningPhrase, middlePhrase, endingPhrase);
+    generatedStatementElement.innerHTML = `<i class="fa-solid fa-quote-left"></i> "${generatedStatement}" <i class="fa-solid fa-quote-right"></i>`;
 };
 
