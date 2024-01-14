@@ -2,6 +2,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 body {
@@ -25,33 +26,38 @@ body {
 
 .generated-area {
     background-color: antiquewhite;
-    height: 50%;
+    height: 70%;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 h1 {
-    font-size: 90px;
-    padding: 30px;
+    font-size: 5rem;
+    padding: 0 30px 0 30px;
 }
 
 h2 {
-    font-size: 30px;
-    padding: 5px 0 20px 0;
+    font-size: 2rem;
+    padding: 0 0 40px 0;
     font-style: italic;
 }
 
 .statement-area {
-    height: 30%;
+    height: 50%;
+    width: 80%;
 }
 
 .statement {
-    font-size: 80px;
+    font-size: 5rem;
     font-style: italic;
+    margin-bottom: 2rem;
 }
 
 p {
-    font-size: 25px;
+    font-size: 1.5rem;
     margin: 2.5% 0 2.5% 0;
     text-align: center;
+    margin: 0 2rem;
 }
 
 .wand {
@@ -59,10 +65,18 @@ p {
     height: 10%;
 }
 
+i {
+    font-size: 4rem;
+}
+
+.page-info {
+    margin: 30px;
+}
+
 /* button styles */
 
 button {
-    margin: 20px;
+    margin: 40px 20px 20px 20px;
     font-size: 30px;
     background-color: lightskyblue;
     box-shadow: 10px 5px 5px grey;
@@ -100,5 +114,14 @@ footer {
     width: 50px;
     padding: 30px 30px;
     font-size: 15px;
+}
+
+/* footer responsive css */
+
+@media screen and (max-width: 1000px) {
+    footer {
+        flex-direction: column !important;
+        height: 80vh;
+    }
 }
 
