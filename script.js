@@ -35,28 +35,55 @@ const beginningPhrase = [
   
 // Generator
 
+// Helper function to get a random word from an array
+const getRandomWord = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+// Generator function
 const phraseGenerator = (arr1, arr2, arr3) => {
-    let word1 = arr1[Math.floor(Math.random() * arr1.length)];
-    let word2 = arr2[Math.floor(Math.random() * arr2.length)];
-    let word3 = arr3[Math.floor(Math.random() * arr3.length)];
-    let word4 = arr2[Math.floor(Math.random() * arr2.length)];
-    let word5 = arr3[Math.floor(Math.random() * arr3.length)];
+    let word1 = getRandomWord(arr1);
+    let word2 = getRandomWord(arr2);
+    let word3 = getRandomWord(arr3);
+    let word4 = getRandomWord(arr2);
+    let word5 = getRandomWord(arr3);
 
     let howManyWords = Math.floor(Math.random() * 3) + 2;
 
     if (howManyWords === 3) {
-        return word1 + word2 + word3;
+        return `${word1}${word2}${word3}`;
     } else if (howManyWords === 4) {
-        return word1 + word2 + word3 + " " + word4;
+        return `${word1}${word2}${word3} ${word4}`;
     } else {
-        return word1 + word2 + word3 + " " + word4 + word5;
+        return `${word1}${word2}${word3} ${word4}${word5}`;
     }
-}
-
-const updateGeneratedStatement = () => {
-
-    const generatedStatementElement = document.getElementById('generatedStatement');
-    const generatedStatement = phraseGenerator(beginningPhrase, middlePhrase, endingPhrase);
-    generatedStatementElement.innerHTML = `<i class="fa-solid fa-quote-left"></i> "${generatedStatement}" <i class="fa-solid fa-quote-right"></i>`;
 };
 
+let generatedStatement = '';
+
+const updateGeneratedStatement = () => {
+  const generatedStatementElement = document.getElementById('generatedStatement');
+  generatedStatement = phraseGenerator(beginningPhrase, middlePhrase, endingPhrase);
+  generatedStatementElement.innerHTML = `<i class="fa-solid fa-quote-left"></i> ${generatedStatement} <i class="fa-solid fa-quote-right"></i>`;
+  return generatedStatement;
+};
+
+// Script for saving favourite quotes
+
+const savedQuotes = [];
+
+const saveAQuote = (generatedStatement) => {
+  savedQuotes.push(generatedStatement);
+
+  const savedItemList = document.getElementById('saved-list');
+  
+  // Clear existing list items
+  savedItemList.innerHTML = '';
+
+  // Iterate over savedQuotes and create list items
+  savedQuotes.forEach((quote) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = quote;
+    savedItemList.appendChild(listItem);
+  });
+
+  console.log(savedQuotes);
+};
