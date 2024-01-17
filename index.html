@@ -4,34 +4,48 @@
         <title>Inspire No One</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
     </head>
     <body>
         <main class="flex-container">
-        <div class="flex-container">
-        <div class="title-container flex-container">
-            <img class="wand" src="media/magic-wand.1020x1024.png">
-            <h1>Inspire No One</h1>
-            <img class="wand" src="media/magic-wand.1020x1024.png">
-        </div>
-        <h2>The inspirational nonsense generator.</h2>
-        </div>
-        <div class="generated-area flex-container">
-            <div class="statement-area flex-container">
-            <p class="statement" id="generatedStatement"></p>
+            <div class="flex-container">
+                <div class="title-container flex-container">
+                    <img class="wand" src="media/magic-wand.1020x1024.png" alt="magic wand">
+                    <h1>Inspire No One</h1>
+                    <img class="wand" src="media/magic-wand.1020x1024.png" alt="magic wand">
+                </div>
+            <h2>The inspirational nonsense generator.</h2>
             </div>
-            <button onclick="updateGeneratedStatement()" class="generate-btn">Generate</button>
-        </div>
-        <p class="page-info">Whenever you're feeling down or uninspired come to this page and hit the button to be unlifted by a statement that's pretty useless and non-sensical.
-            It's random though so it might make you laugh and smile for second before looking over your shoulder to make sure no one is watching you do this weird stuff.</p>
+            <div class="generated-area flex-container">
+                <div class="statement-area flex-container">
+                <p class="statement" id="generatedStatement"></p>
+                </div>
+                <div class="flex-container btn-container">
+                <button onclick="updateGeneratedStatement()" class="generate-btn">Generate</button>
+                <button onclick="saveAQuote(generatedStatement)" class="generate-btn save-btn">Save</button>
+                </div>
+            </div>
+                <div class="flex-container saved-container">
+                    <ul id="saved-list" class="saved-list">
+                        
+                    </ul>
+                </div>
+            
         </main>
         <script type="text/javascript" src="script.js"></script>
     </body>
     <footer class="flex-container">
-        <div class="col-3 flex-container"><i class="fa-brands fa-github"></i></div>
+        <div class="col-3 flex-container">
+            <a href="https://github.com/Jordamon" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
         <div class="col-3 flex-container">This page was designed with mental health in mind. Sometimes we need a break and to not be so serious. Please see the following links on how to keep on top of your mental health.
             <div class="link-container flex-container">
-            <button class="link">NHS</button>
-            <button class="link">Other</button>
+            <br>
+            <a>https://www.nhs.uk/nhs-services/mental-health-services/</a>
+            <br>
+            <a>https://www.mind.org.uk/</a>
             </div>
         </div>
         <div class="col-3 flex-container">Code by Jordamon</div>
