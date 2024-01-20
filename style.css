@@ -3,10 +3,13 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
 }
 
 body {
-    height: 100vh;
+    background-image: url('media/texture-background.jpg');
+    background-size: cover;
 }
 
 .flex-container {
@@ -17,6 +20,10 @@ body {
     text-align: center;
 }
 
+main {
+    min-height: 90vh;
+}
+
 /* page feature styles */
 
 .title-container {
@@ -25,15 +32,15 @@ body {
 }
 
 .generated-area {
-    background-color: antiquewhite;
-    height: 70%;
-    justify-content: space-evenly;
+    height: 55vh;
+    justify-content: center;
     width: 100%;
 }
 
 h1 {
     font-size: 5rem;
     padding: 0 30px 0 30px;
+    font-weight: 700;
 }
 
 h2 {
@@ -68,23 +75,18 @@ p {
 i {
     font-size: 4rem;
 }
-
-.page-info {
-    margin: 30px;
-}
-
 /* button styles */
 
 button {
-    margin: 40px 20px 20px 20px;
-    font-size: 30px;
+    margin: 2.5rem 1.25rem 1.25rem 1.25rem;
+    font-size: 2rem;
     background-color: lightskyblue;
-    box-shadow: 10px 5px 5px grey;
-    border-radius: 10px;
+    box-shadow: 1rem 0.5rem 0.5rem grey;
+    border-radius: 1rem;
     text-align: center;
 }
 .generate-btn {
-    padding: 40px 100px;
+    padding: 2.5rem 5rem;
 }
 
 button:active {
@@ -93,12 +95,41 @@ button:active {
     box-shadow: inset 0px 0px 10px #0a0a0a;
 }
 
+.btn-container {
+    flex-direction: row;
+}
+
+.save-btn {
+    background-color: rgba(255, 166, 0, 0.733);
+}
+
+/* List styles */
+.list-container {
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+ul li {
+    display: inline-block;
+    margin: 5rem; 
+    font-size: 2rem;
+  }
+
 /* footer styles */
 
 footer {
     flex-direction: row !important;
-    background-color: rgba(6, 6, 6, 0.358);
-    height: 33%;
+    background-color: rgba(6, 6, 6, 0.601);
+    height: 20%;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    color: white;
 }
 
 .col-3 {
@@ -106,7 +137,7 @@ footer {
 }
 
 .link-container {
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .link {
@@ -116,12 +147,76 @@ footer {
     font-size: 15px;
 }
 
-/* footer responsive css */
+a {
+    font-style: italic;
+    text-decoration: underline;
+}
 
-@media screen and (max-width: 1000px) {
+/* responsive css */
+
+@media only screen and (max-width: 450px) {
+    button {
+        margin: 1.5rem 0.25rem 0.25rem 0.25rem;
+        font-size: 1rem;
+        height: 10%;
+        width: 10%;
+    }
+    .generate-btn {
+        padding: 30%, 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 3rem;
+        padding: 0;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .statement {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    main {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    button {
+        margin: 1.5rem 0.25rem 0.25rem 0.25rem;
+        font-size: 1rem;
+        height: 10%;
+        width: 10%;
+    }
+    .generate-btn {
+        padding: 30%, 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 3rem;
+        padding: 0;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .statement {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    main {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 110%;
+    }
     footer {
-        flex-direction: column !important;
-        height: 80vh;
+        margin-top: 10%;
     }
 }
 
