@@ -10,6 +10,7 @@
 body {
     background-image: url('media/texture-background.jpg');
     background-size: cover;
+    width:100vw;
 }
 
 .flex-container {
@@ -32,7 +33,7 @@ main {
 }
 
 .generated-area {
-    height: 55vh;
+    height: 70vh;
     justify-content: center;
     width: 100%;
 }
@@ -97,6 +98,7 @@ button:active {
 
 .btn-container {
     flex-direction: row;
+    width: 100%;
 }
 
 .save-btn {
@@ -158,11 +160,11 @@ a {
     button {
         margin: 1.5rem 0.25rem 0.25rem 0.25rem;
         font-size: 1rem;
-        height: 10%;
-        width: 10%;
+        height: 5%;
+        width: 5%;
     }
     .generate-btn {
-        padding: 30%, 40%;
+        padding: 10% 15%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -201,7 +203,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 451px) and (max-width: 767px) {
     button {
         margin: 1.5rem 0.25rem 0.25rem 0.25rem;
         font-size: 1rem;
@@ -209,7 +211,6 @@ a {
         width: 10%;
     }
     .generate-btn {
-        padding: 30%, 40%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -235,4 +236,3 @@ a {
         margin-top: 10%;
     }
 }
-
